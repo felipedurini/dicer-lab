@@ -1,0 +1,272 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dicer-lab.local/contracts/design/v1/protocol.schema.json",
+  "title": "Dicer Lab Go design protocol v1",
+  "oneOf": [
+    {
+      "$ref": "#/$defs/discovery"
+    },
+    {
+      "$ref": "#/$defs/assemblyRequest"
+    },
+    {
+      "$ref": "#/$defs/assemblyResult"
+    },
+    {
+      "$ref": "#/$defs/blocksRequest"
+    },
+    {
+      "$ref": "#/$defs/blocksResult"
+    },
+    {
+      "$ref": "#/$defs/screenRequest"
+    },
+    {
+      "$ref": "#/$defs/screenResult"
+    }
+  ],
+  "$defs": {
+    "occurrence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "gene_id",
+        "start",
+        "end"
+      ],
+      "properties": {
+        "gene_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "start": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "end": {
+          "type": "integer",
+          "minimum": 1
+        }
+      }
+    },
+    "kmer": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "sequence_rna",
+        "occurrences",
+        "occurrences_count",
+        "excluded_reference_ids"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "sequence_rna": {
+          "type": "string",
+          "pattern": "^[ACGU]{21}$"
+        },
+        "occurrences": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/occurrence"
+          }
+        },
+        "occurrences_count": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "excluded_reference_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "discovery": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schema_version",
+        "k",
+        "genes",
+        "kmers"
+      ],
+      "properties": {
+        "schema_version": {
+          "const": 1
+        },
+        "k": {
+          "const": 21
+        },
+        "genes": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        },
+        "kmers": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/kmer"
+          }
+        }
+      }
+    },
+    "assemblyRequest": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schema_version",
+        "lambda",
+        "weights"
+      ],
+      "properties": {
+        "schema_version": {
+          "const": 1
+        },
+        "lambda": {
+          "enum": [
+            0,
+            1
+          ]
+        },
+        "weights": {
+          "type": "object",
+          "minProperties": 1,
+          "additionalProperties": {
+            "type": "number",
+            "minimum": 1,
+            "maximum": 2
+          }
+        }
+      }
+    },
+    "assemblyResult": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schema_version",
+        "selected_sequence_rna",
+        "coverage",
+        "weight",
+        "objective",
+        "deterministic_tie_break"
+      ],
+      "properties": {
+        "schema_version": {
+          "const": 1
+        },
+        "selected_sequence_rna": {
+          "type": "string",
+          "pattern": "^[ACGU]{21}$"
+        },
+        "coverage": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "weight": {
+          "type": "number",
+          "minimum": 1,
+          "maximum": 2
+        },
+        "objective": {
+          "type": "number",
+          "minimum": 1
+        },
+        "deterministic_tie_break": {
+          "const": true
+        }
+      }
+    },
+    "blocksRequest": {
+      "type": "object",
+      "required": [
+        "schema_version",
+        "targets",
+        "block_lengths",
+        "weights",
+        "max_blocks_per_gene"
+      ],
+      "properties": {
+        "schema_version": {
+          "const": 1
+        },
+        "targets": {
+          "type": "array"
+        },
+        "block_lengths": {
+          "type": "array"
+        },
+        "weights": {
+          "type": "object"
+        },
+        "max_blocks_per_gene": {
+          "const": 5
+        }
+      }
+    },
+    "blocksResult": {
+      "type": "object",
+      "required": [
+        "schema_version",
+        "blocks"
+      ],
+      "properties": {
+        "schema_version": {
+          "const": 1
+        },
+        "blocks": {
+          "type": "array"
+        }
+      }
+    },
+    "screenRequest": {
+      "type": "object",
+      "required": [
+        "schema_version",
+        "candidates"
+      ],
+      "properties": {
+        "schema_version": {
+          "const": 1
+        },
+        "candidates": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "id",
+              "sequence_dna"
+            ]
+          }
+        }
+      }
+    },
+    "screenResult": {
+      "type": "object",
+      "required": [
+        "schema_version",
+        "hits",
+        "reference_windows_skipped"
+      ],
+      "properties": {
+        "schema_version": {
+          "const": 1
+        },
+        "hits": {
+          "type": "array"
+        },
+        "reference_windows_skipped": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    }
+  }
+}

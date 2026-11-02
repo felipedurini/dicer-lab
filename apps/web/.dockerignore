@@ -1,0 +1,17 @@
+# This directory is the standalone web Docker build context.
+.env
+.env.*
+!.env.example
+node_modules
+.next
+out
+coverage
+playwright-report
+test-results
+.vercel
+.git
+*.log
+*.tsbuildinfo
+*.pem
+*.key
+.npmrc

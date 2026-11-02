@@ -1,0 +1,1009 @@
+{
+  "config": {
+    "f_left": 0.5,
+    "n_molecules": 50000,
+    "seed": 31503
+  },
+  "construct": {
+    "length_nt": 315,
+    "phase_origin_nt": 0,
+    "segments": [
+      {
+        "end": 105,
+        "gene_id": "gen_A",
+        "segment_id": "tramo_A",
+        "start": 0
+      },
+      {
+        "end": 210,
+        "gene_id": "gen_B",
+        "segment_id": "tramo_B",
+        "start": 105
+      },
+      {
+        "end": 315,
+        "gene_id": "gen_C",
+        "segment_id": "tramo_C",
+        "start": 210
+      }
+    ]
+  },
+  "metadata": {
+    "bit_generator": "PCG64",
+    "numpy": "2.4.0",
+    "python": "3.13.1",
+    "seed": 31503
+  },
+  "metric_definitions": {
+    "coverage_fraction": "overlap nt / (molecules * target length nt)",
+    "proportion21": "number of emitted 21 nt products / all emitted products",
+    "recovery_fraction": "exact physical 21 nt interval count / molecules"
+  },
+  "model": {
+    "epsilon": {
+      "breakpoints": [
+        106,
+        211
+      ],
+      "schema_version": 1,
+      "type": "piecewise",
+      "values": [
+        0.05,
+        0.1,
+        0.2
+      ]
+    },
+    "p22": 0.5,
+    "schema_version": 1,
+    "support_nt": [
+      21,
+      22,
+      24
+    ],
+    "type": "epsilon_cut_model"
+  },
+  "provenance": {
+    "git_revision": null,
+    "source_hashes": {
+      "analysis.py": "4c0424d2d9e4336a5c6d408c22274c77b6c6a9a80bad395c0da6713972cfefb3",
+      "domain.py": "c90e041c90d9acbbc5d56fbcb2d335d257e0e034b71043658abf9f4fc7cfb405",
+      "exact.py": "5f7b1ad74782147e3eedd9e391ac5e2c96a758adb58fdeca2c3dd6b5682219df",
+      "experiments.py": "181aaab6aaa4bc28b1beb2f3c9bd4f7e910bdd1b6599d7733aad02c13ee23219",
+      "models.py": "80afcdd79b3a3c6ee37a28ccfd467fc78072ffd1444dcd2c22a970dd501a8b90",
+      "simulation.py": "5b767c9abdb7703805408d1e1b6377732e87f848a3d0f39adfd1d55f03e23e28"
+    }
+  },
+  "rng": {
+    "name": "numpy.random.Generator(PCG64)",
+    "seed": 31503,
+    "spawn_keys": [
+      [
+        0
+      ],
+      [
+        1
+      ]
+    ],
+    "streams": [
+      "direction",
+      "cuts"
+    ]
+  },
+  "schema_version": 1,
+  "summary": {
+    "aligned21_global_count": 235845,
+    "aligned21_local_count": 235845,
+    "contained_count": 633492,
+    "crossing_count": 73960,
+    "direction_summaries": [
+      {
+        "aligned21_global_count": 117106,
+        "aligned21_local_count": 117106,
+        "contained_count": 314797,
+        "crossing_count": 36808,
+        "direction": "left",
+        "gene_crossing_count": 36808,
+        "global_phase_before_count": 138076,
+        "length_counts": [
+          [
+            21,
+            309492
+          ],
+          [
+            22,
+            21128
+          ],
+          [
+            24,
+            20985
+          ]
+        ],
+        "n_molecules": 24852,
+        "n_molecules_without_products": 0,
+        "n_products": 351605,
+        "ordinal_counts": [
+          {
+            "aligned21_local_count": 19909,
+            "cut_index": 1,
+            "n_reached": 24852,
+            "relative_phase_after_count": 19909,
+            "relative_phase_before_count": 24852
+          },
+          {
+            "aligned21_local_count": 15904,
+            "cut_index": 2,
+            "n_reached": 24852,
+            "relative_phase_after_count": 15904,
+            "relative_phase_before_count": 19909
+          },
+          {
+            "aligned21_local_count": 12659,
+            "cut_index": 3,
+            "n_reached": 24852,
+            "relative_phase_after_count": 12659,
+            "relative_phase_before_count": 15904
+          },
+          {
+            "aligned21_local_count": 10145,
+            "cut_index": 4,
+            "n_reached": 24852,
+            "relative_phase_after_count": 10145,
+            "relative_phase_before_count": 12659
+          },
+          {
+            "aligned21_local_count": 8123,
+            "cut_index": 5,
+            "n_reached": 24852,
+            "relative_phase_after_count": 8123,
+            "relative_phase_before_count": 10145
+          },
+          {
+            "aligned21_local_count": 7320,
+            "cut_index": 6,
+            "n_reached": 24852,
+            "relative_phase_after_count": 7320,
+            "relative_phase_before_count": 8123
+          },
+          {
+            "aligned21_local_count": 6549,
+            "cut_index": 7,
+            "n_reached": 24852,
+            "relative_phase_after_count": 6549,
+            "relative_phase_before_count": 7320
+          },
+          {
+            "aligned21_local_count": 5902,
+            "cut_index": 8,
+            "n_reached": 24852,
+            "relative_phase_after_count": 5902,
+            "relative_phase_before_count": 6549
+          },
+          {
+            "aligned21_local_count": 5326,
+            "cut_index": 9,
+            "n_reached": 24852,
+            "relative_phase_after_count": 5326,
+            "relative_phase_before_count": 5902
+          },
+          {
+            "aligned21_local_count": 4773,
+            "cut_index": 10,
+            "n_reached": 24852,
+            "relative_phase_after_count": 4773,
+            "relative_phase_before_count": 5326
+          },
+          {
+            "aligned21_local_count": 4540,
+            "cut_index": 11,
+            "n_reached": 24852,
+            "relative_phase_after_count": 4540,
+            "relative_phase_before_count": 4773
+          },
+          {
+            "aligned21_local_count": 4306,
+            "cut_index": 12,
+            "n_reached": 24852,
+            "relative_phase_after_count": 4306,
+            "relative_phase_before_count": 4540
+          },
+          {
+            "aligned21_local_count": 4091,
+            "cut_index": 13,
+            "n_reached": 24852,
+            "relative_phase_after_count": 4091,
+            "relative_phase_before_count": 4306
+          },
+          {
+            "aligned21_local_count": 3882,
+            "cut_index": 14,
+            "n_reached": 24852,
+            "relative_phase_after_count": 3882,
+            "relative_phase_before_count": 4091
+          },
+          {
+            "aligned21_local_count": 3677,
+            "cut_index": 15,
+            "n_reached": 3677,
+            "relative_phase_after_count": 3677,
+            "relative_phase_before_count": 3677
+          }
+        ],
+        "relative_phase_after_count": 117106,
+        "relative_phase_before_count": 138076,
+        "terminal_length_items": [
+          [
+            0,
+            3677
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            5,
+            5
+          ],
+          [
+            6,
+            14
+          ],
+          [
+            7,
+            15
+          ],
+          [
+            8,
+            59
+          ],
+          [
+            9,
+            121
+          ],
+          [
+            10,
+            115
+          ],
+          [
+            11,
+            342
+          ],
+          [
+            12,
+            628
+          ],
+          [
+            13,
+            580
+          ],
+          [
+            14,
+            1491
+          ],
+          [
+            15,
+            2070
+          ],
+          [
+            16,
+            1542
+          ],
+          [
+            17,
+            3666
+          ],
+          [
+            18,
+            4495
+          ],
+          [
+            19,
+            1810
+          ],
+          [
+            20,
+            4015
+          ],
+          [
+            21,
+            205
+          ],
+          [
+            22,
+            0
+          ],
+          [
+            23,
+            0
+          ]
+        ],
+        "terminal_reason_items": [
+          [
+            "exhausted",
+            3677
+          ],
+          [
+            "shorter_than_min",
+            20970
+          ],
+          [
+            "proposal_exceeds_remaining",
+            205
+          ]
+        ]
+      },
+      {
+        "aligned21_global_count": 118739,
+        "aligned21_local_count": 118739,
+        "contained_count": 318695,
+        "crossing_count": 37152,
+        "direction": "right",
+        "gene_crossing_count": 37152,
+        "global_phase_before_count": 139907,
+        "length_counts": [
+          [
+            21,
+            313039
+          ],
+          [
+            22,
+            21486
+          ],
+          [
+            24,
+            21322
+          ]
+        ],
+        "n_molecules": 25148,
+        "n_molecules_without_products": 0,
+        "n_products": 355847,
+        "ordinal_counts": [
+          {
+            "aligned21_local_count": 20009,
+            "cut_index": 1,
+            "n_reached": 25148,
+            "relative_phase_after_count": 20009,
+            "relative_phase_before_count": 25148
+          },
+          {
+            "aligned21_local_count": 15996,
+            "cut_index": 2,
+            "n_reached": 25148,
+            "relative_phase_after_count": 15996,
+            "relative_phase_before_count": 20009
+          },
+          {
+            "aligned21_local_count": 12865,
+            "cut_index": 3,
+            "n_reached": 25148,
+            "relative_phase_after_count": 12865,
+            "relative_phase_before_count": 15996
+          },
+          {
+            "aligned21_local_count": 10289,
+            "cut_index": 4,
+            "n_reached": 25148,
+            "relative_phase_after_count": 10289,
+            "relative_phase_before_count": 12865
+          },
+          {
+            "aligned21_local_count": 8261,
+            "cut_index": 5,
+            "n_reached": 25148,
+            "relative_phase_after_count": 8261,
+            "relative_phase_before_count": 10289
+          },
+          {
+            "aligned21_local_count": 7372,
+            "cut_index": 6,
+            "n_reached": 25148,
+            "relative_phase_after_count": 7372,
+            "relative_phase_before_count": 8261
+          },
+          {
+            "aligned21_local_count": 6651,
+            "cut_index": 7,
+            "n_reached": 25148,
+            "relative_phase_after_count": 6651,
+            "relative_phase_before_count": 7372
+          },
+          {
+            "aligned21_local_count": 6029,
+            "cut_index": 8,
+            "n_reached": 25148,
+            "relative_phase_after_count": 6029,
+            "relative_phase_before_count": 6651
+          },
+          {
+            "aligned21_local_count": 5429,
+            "cut_index": 9,
+            "n_reached": 25148,
+            "relative_phase_after_count": 5429,
+            "relative_phase_before_count": 6029
+          },
+          {
+            "aligned21_local_count": 4883,
+            "cut_index": 10,
+            "n_reached": 25148,
+            "relative_phase_after_count": 4883,
+            "relative_phase_before_count": 5429
+          },
+          {
+            "aligned21_local_count": 4635,
+            "cut_index": 11,
+            "n_reached": 25148,
+            "relative_phase_after_count": 4635,
+            "relative_phase_before_count": 4883
+          },
+          {
+            "aligned21_local_count": 4388,
+            "cut_index": 12,
+            "n_reached": 25148,
+            "relative_phase_after_count": 4388,
+            "relative_phase_before_count": 4635
+          },
+          {
+            "aligned21_local_count": 4177,
+            "cut_index": 13,
+            "n_reached": 25148,
+            "relative_phase_after_count": 4177,
+            "relative_phase_before_count": 4388
+          },
+          {
+            "aligned21_local_count": 3980,
+            "cut_index": 14,
+            "n_reached": 25148,
+            "relative_phase_after_count": 3980,
+            "relative_phase_before_count": 4177
+          },
+          {
+            "aligned21_local_count": 3775,
+            "cut_index": 15,
+            "n_reached": 3775,
+            "relative_phase_after_count": 3775,
+            "relative_phase_before_count": 3775
+          }
+        ],
+        "relative_phase_after_count": 118739,
+        "relative_phase_before_count": 139907,
+        "terminal_length_items": [
+          [
+            0,
+            3775
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            6,
+            15
+          ],
+          [
+            7,
+            21
+          ],
+          [
+            8,
+            56
+          ],
+          [
+            9,
+            108
+          ],
+          [
+            10,
+            124
+          ],
+          [
+            11,
+            416
+          ],
+          [
+            12,
+            595
+          ],
+          [
+            13,
+            556
+          ],
+          [
+            14,
+            1550
+          ],
+          [
+            15,
+            2128
+          ],
+          [
+            16,
+            1527
+          ],
+          [
+            17,
+            3724
+          ],
+          [
+            18,
+            4546
+          ],
+          [
+            19,
+            1775
+          ],
+          [
+            20,
+            4013
+          ],
+          [
+            21,
+            205
+          ],
+          [
+            22,
+            0
+          ],
+          [
+            23,
+            0
+          ]
+        ],
+        "terminal_reason_items": [
+          [
+            "exhausted",
+            3775
+          ],
+          [
+            "shorter_than_min",
+            21168
+          ],
+          [
+            "proposal_exceeds_remaining",
+            205
+          ]
+        ]
+      }
+    ],
+    "gene_counts": [
+      {
+        "contained_count": 211898,
+        "crossing_touching_count": 36994,
+        "gene_crossing_touching_count": 36994,
+        "gene_id": "gen_A",
+        "gene_length_nt": 105,
+        "n_molecules": 50000,
+        "overlap_nt": 4886619,
+        "segment_ids": [
+          "tramo_A"
+        ],
+        "touching_count": 248892
+      },
+      {
+        "contained_count": 209656,
+        "crossing_touching_count": 73960,
+        "gene_crossing_touching_count": 73960,
+        "gene_id": "gen_B",
+        "gene_length_nt": 105,
+        "n_molecules": 50000,
+        "overlap_nt": 5250000,
+        "segment_ids": [
+          "tramo_B"
+        ],
+        "touching_count": 283616
+      },
+      {
+        "contained_count": 211938,
+        "crossing_touching_count": 36966,
+        "gene_crossing_touching_count": 36966,
+        "gene_id": "gen_C",
+        "gene_length_nt": 105,
+        "n_molecules": 50000,
+        "overlap_nt": 4889408,
+        "segment_ids": [
+          "tramo_C"
+        ],
+        "touching_count": 248904
+      }
+    ],
+    "gene_crossing_count": 73960,
+    "global_phase_before_count": 277983,
+    "length_counts": [
+      [
+        21,
+        622531
+      ],
+      [
+        22,
+        42614
+      ],
+      [
+        24,
+        42307
+      ]
+    ],
+    "n_molecules": 50000,
+    "n_molecules_without_products": 0,
+    "n_products": 707452,
+    "ordinal_counts": [
+      {
+        "aligned21_local_count": 39918,
+        "cut_index": 1,
+        "n_reached": 50000,
+        "relative_phase_after_count": 39918,
+        "relative_phase_before_count": 50000
+      },
+      {
+        "aligned21_local_count": 31900,
+        "cut_index": 2,
+        "n_reached": 50000,
+        "relative_phase_after_count": 31900,
+        "relative_phase_before_count": 39918
+      },
+      {
+        "aligned21_local_count": 25524,
+        "cut_index": 3,
+        "n_reached": 50000,
+        "relative_phase_after_count": 25524,
+        "relative_phase_before_count": 31900
+      },
+      {
+        "aligned21_local_count": 20434,
+        "cut_index": 4,
+        "n_reached": 50000,
+        "relative_phase_after_count": 20434,
+        "relative_phase_before_count": 25524
+      },
+      {
+        "aligned21_local_count": 16384,
+        "cut_index": 5,
+        "n_reached": 50000,
+        "relative_phase_after_count": 16384,
+        "relative_phase_before_count": 20434
+      },
+      {
+        "aligned21_local_count": 14692,
+        "cut_index": 6,
+        "n_reached": 50000,
+        "relative_phase_after_count": 14692,
+        "relative_phase_before_count": 16384
+      },
+      {
+        "aligned21_local_count": 13200,
+        "cut_index": 7,
+        "n_reached": 50000,
+        "relative_phase_after_count": 13200,
+        "relative_phase_before_count": 14692
+      },
+      {
+        "aligned21_local_count": 11931,
+        "cut_index": 8,
+        "n_reached": 50000,
+        "relative_phase_after_count": 11931,
+        "relative_phase_before_count": 13200
+      },
+      {
+        "aligned21_local_count": 10755,
+        "cut_index": 9,
+        "n_reached": 50000,
+        "relative_phase_after_count": 10755,
+        "relative_phase_before_count": 11931
+      },
+      {
+        "aligned21_local_count": 9656,
+        "cut_index": 10,
+        "n_reached": 50000,
+        "relative_phase_after_count": 9656,
+        "relative_phase_before_count": 10755
+      },
+      {
+        "aligned21_local_count": 9175,
+        "cut_index": 11,
+        "n_reached": 50000,
+        "relative_phase_after_count": 9175,
+        "relative_phase_before_count": 9656
+      },
+      {
+        "aligned21_local_count": 8694,
+        "cut_index": 12,
+        "n_reached": 50000,
+        "relative_phase_after_count": 8694,
+        "relative_phase_before_count": 9175
+      },
+      {
+        "aligned21_local_count": 8268,
+        "cut_index": 13,
+        "n_reached": 50000,
+        "relative_phase_after_count": 8268,
+        "relative_phase_before_count": 8694
+      },
+      {
+        "aligned21_local_count": 7862,
+        "cut_index": 14,
+        "n_reached": 50000,
+        "relative_phase_after_count": 7862,
+        "relative_phase_before_count": 8268
+      },
+      {
+        "aligned21_local_count": 7452,
+        "cut_index": 15,
+        "n_reached": 7452,
+        "relative_phase_after_count": 7452,
+        "relative_phase_before_count": 7452
+      }
+    ],
+    "physical_unit_counts": [
+      {
+        "end": 21,
+        "n_molecules": 50000,
+        "recovered_molecule_count": 23684,
+        "start": 0
+      },
+      {
+        "end": 42,
+        "n_molecules": 50000,
+        "recovered_molecule_count": 19884,
+        "start": 21
+      },
+      {
+        "end": 63,
+        "n_molecules": 50000,
+        "recovered_molecule_count": 16836,
+        "start": 42
+      },
+      {
+        "end": 84,
+        "n_molecules": 50000,
+        "recovered_molecule_count": 14533,
+        "start": 63
+      },
+      {
+        "end": 105,
+        "n_molecules": 50000,
+        "recovered_molecule_count": 12758,
+        "start": 84
+      },
+      {
+        "end": 126,
+        "n_molecules": 50000,
+        "recovered_molecule_count": 12203,
+        "start": 105
+      },
+      {
+        "end": 147,
+        "n_molecules": 50000,
+        "recovered_molecule_count": 11978,
+        "start": 126
+      },
+      {
+        "end": 168,
+        "n_molecules": 50000,
+        "recovered_molecule_count": 11931,
+        "start": 147
+      },
+      {
+        "end": 189,
+        "n_molecules": 50000,
+        "recovered_molecule_count": 11977,
+        "start": 168
+      },
+      {
+        "end": 210,
+        "n_molecules": 50000,
+        "recovered_molecule_count": 12145,
+        "start": 189
+      },
+      {
+        "end": 231,
+        "n_molecules": 50000,
+        "recovered_molecule_count": 12801,
+        "start": 210
+      },
+      {
+        "end": 252,
+        "n_molecules": 50000,
+        "recovered_molecule_count": 14595,
+        "start": 231
+      },
+      {
+        "end": 273,
+        "n_molecules": 50000,
+        "recovered_molecule_count": 16956,
+        "start": 252
+      },
+      {
+        "end": 294,
+        "n_molecules": 50000,
+        "recovered_molecule_count": 19878,
+        "start": 273
+      },
+      {
+        "end": 315,
+        "n_molecules": 50000,
+        "recovered_molecule_count": 23686,
+        "start": 294
+      }
+    ],
+    "relative_phase_after_count": 235845,
+    "relative_phase_before_count": 277983,
+    "segment_counts": [
+      {
+        "contained_count": 211898,
+        "crossing_touching_count": 36994,
+        "end": 105,
+        "gene_id": "gen_A",
+        "n_molecules": 50000,
+        "overlap_nt": 4886619,
+        "segment_id": "tramo_A",
+        "start": 0,
+        "touching_count": 248892
+      },
+      {
+        "contained_count": 209656,
+        "crossing_touching_count": 73960,
+        "end": 210,
+        "gene_id": "gen_B",
+        "n_molecules": 50000,
+        "overlap_nt": 5250000,
+        "segment_id": "tramo_B",
+        "start": 105,
+        "touching_count": 283616
+      },
+      {
+        "contained_count": 211938,
+        "crossing_touching_count": 36966,
+        "end": 315,
+        "gene_id": "gen_C",
+        "n_molecules": 50000,
+        "overlap_nt": 4889408,
+        "segment_id": "tramo_C",
+        "start": 210,
+        "touching_count": 248904
+      }
+    ],
+    "terminal_length_items": [
+      [
+        0,
+        7452
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        3,
+        3
+      ],
+      [
+        4,
+        6
+      ],
+      [
+        5,
+        12
+      ],
+      [
+        6,
+        29
+      ],
+      [
+        7,
+        36
+      ],
+      [
+        8,
+        115
+      ],
+      [
+        9,
+        229
+      ],
+      [
+        10,
+        239
+      ],
+      [
+        11,
+        758
+      ],
+      [
+        12,
+        1223
+      ],
+      [
+        13,
+        1136
+      ],
+      [
+        14,
+        3041
+      ],
+      [
+        15,
+        4198
+      ],
+      [
+        16,
+        3069
+      ],
+      [
+        17,
+        7390
+      ],
+      [
+        18,
+        9041
+      ],
+      [
+        19,
+        3585
+      ],
+      [
+        20,
+        8028
+      ],
+      [
+        21,
+        410
+      ],
+      [
+        22,
+        0
+      ],
+      [
+        23,
+        0
+      ]
+    ],
+    "terminal_reason_items": [
+      [
+        "exhausted",
+        7452
+      ],
+      [
+        "shorter_than_min",
+        42138
+      ],
+      [
+        "proposal_exceeds_remaining",
+        410
+      ]
+    ]
+  },
+  "support_nt": [
+    21,
+    22,
+    24
+  ],
+  "terminal_rule": "stop_on_overshoot_v1"
+}

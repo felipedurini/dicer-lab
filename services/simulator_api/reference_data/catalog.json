@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "references": [
+    {
+      "id": "apis_mellifera_amel_hav3_1_ar104",
+      "organism": "Apis mellifera",
+      "version": "GCF_003254395.2_Amel_HAv3.1; NCBI Annotation Release 104",
+      "assembly_accession": "GCF_003254395.2",
+      "annotation_release": 104,
+      "source_uri": "https://ftp.ncbi.nlm.nih.gov/genomes/all/annotation_releases/7460/104/GCF_003254395.2_Amel_HAv3.1/GCF_003254395.2_Amel_HAv3.1_rna.fna.gz",
+      "annotation_report_uri": "https://www.ncbi.nlm.nih.gov/refseq/annotation_euk/Apis_mellifera/104/",
+      "license": "NCBI public RefSeq sequence data; consult https://www.ncbi.nlm.nih.gov/About/disclaimer.html",
+      "relative_path": "builtin/apis_mellifera_amel_hav3_1_ar104_rna.fna",
+      "sha256": "124a2d9c0b0d395b6350b37a4a0980725f8b69fbbb25bf6079d1f65211a6c28e",
+      "length_nt": 98645700,
+      "record_count": 27887,
+      "scope": "complete_transcriptome",
+      "completeness": "complete_annotated_refseq_transcript_set",
+      "molecule_type": "mixed annotated mRNA and non-coding RNA",
+      "provenance": "NCBI RefSeq Apis mellifera Annotation Release 104 for assembly Amel_HAv3.1; RNA FASTA fetched 2026-10-29",
+      "asset_relative_path": "apis_mellifera_amel_hav3_1_annotation_104_rna.fna.gz",
+      "asset_sha256": "f03df1564920b6fa61f73afaa49bf1e27949a4ca5f056eee09c0aa91548a6e34",
+      "asset_md5": "5630586536b037fc4c904d13a98c81c8"
+    }
+  ]
+}
