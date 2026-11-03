@@ -12,9 +12,7 @@ automáticamente archivos `.env`. No usar claves `service_role` en el cliente.
 NCBI recibe los términos/accessions de consultas y el contacto configurado;
 no enviarle material confidencial como consulta.
 
-Para comunicar una vulnerabilidad, usar **Security → Report a vulnerability**
-en GitHub si el mantenedor habilitó reportes privados. Si no está disponible,
-contactar al mantenedor por un canal privado acordado, sin adjuntar secretos a
+Contactar al mantenedor por un canal privado acordado, sin adjuntar secretos a
 issues públicos. No se promete un plazo de respuesta ni soporte de producción.
 
 Antes de publicar una versión, inspeccionar también todas las ramas, etiquetas,
